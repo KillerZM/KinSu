@@ -1,0 +1,20 @@
+#titulo1 {
+    color: blue;
+}
+body{
+    font-family: raleway, sans-serif;
+    background-color: #FFFAED;
+}
+#about1{
+    background-color: rgba(255, 222, 148, 0.2);
+}
+#index_m1{
+    border: #ff4f4f 1px solid;
+}
+#servicios1{
+    background-color: rgb(205, 219, 249);
+    border-radius: 100px;
+    height: 100px;
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
