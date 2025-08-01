@@ -1,15 +1,56 @@
 {% extends "base.html" %}
 {% block title %}Kinsu - Login{% endblock %}
-{% block head %}{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="static/CSS/login.css">
+{% endblock %}
 
 {% block body %}
 
-    <nav class="navbar bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="{{ url_for("index") }}">
-          <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-          Bootstrap
+    {# Empieza el nav #}
+    <nav id="navbar1" class="navbar ">
+      <div  class="container-fluid">
+        <a class="navbar-brand Titulo1" href="{{ url_for("index") }}">
+          <img src="static/img/icon.png" alt="Logo" width="40" height="auto" class="d-inline-block align-text-botom">
+          KinSu
         </a>
       </div>
     </nav>
+    {# termina el nav #}
+    <div id="main1" class="container-fluid">.
+        <div id="login" class="row mx-5 mt-2">
+            {# Area de la imagen izquierda #}
+            <div id="login-lside" class="col-7">
+                <div id="image-container" class="container mt-3 objetfit">
+                    <img id="side-image" src="static/img/suki.jpg" alt="Logo" class="img-thumbnail">
+                </div>
+            </div>
+            {# Area de la parte derecha #}
+            <div id="login-rside" class="col-5 ">
+                <div class="text-center mt-5">
+                    <figure>
+                        <img src="static/img/icon.png" alt="Logo" width="200" height="auto" class="mb-0">
+                        <figcaption class="Titulo2"></figcaption>
+                    </figure>
+                <h1 class="Titulo1 mx-5">INICIAR SESIÓN</h1>
+                </div>
+                {# FORMULARIO DE LOGIN #}
+                <form id="login-form" action="{{ url_for("login") }}" method="POST">
+                  <div class="mb-3 mx-5">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" >
+                  </div>
+                  <div class="mb-3 mx-5">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-3 form-check mx-5">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary mx-5">Iniciar sesion</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}

@@ -11,64 +11,97 @@
     {# Barra de navegacion #}
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ url_for("index") }}">
             {# Falta agregar icono #}
-            <img src="#" alt="icon" width="30" height="24"> KinSu
+            <img src="static/img/Icon.png" alt="icon" width="40" height="auto"> KinSu
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
+          {# Barra de navegación #}
         <div class="collapse navbar-collapse" id="navbarNav">
+            {# Lista de objetos de navegacion #}
           <ul class="navbar-nav">
+              {# Objetos de navegacion #}
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active btn btn-light" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link btn btn-light" href="#">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-disabled="true" href="{{ url_for("login") }}">Login</a>
+              <a class="nav-link btn btn-light" href="#">Pricing</a>
             </li>
           </ul>
         </div>
+          {# BOTON DE LOGIN #}
+        <ul class="navbar-nav justify-content-end">
+            <li class="nav-item ">
+              <a class="nav-link btn btn-light" aria-disabled="true" href="{{ url_for("login") }}"><i class="bi bi-person-fill-gear"> </i> Login</a>
+            </li>
+        </ul>
       </div>
     </nav>
 
     {# Empieza el body #}
     <div class="m-4">
         <div class="container-fluid text-center">
-          <div class="row">
+          <main>
+            <div class="row">
             <div id="about1" class="col-7 ml-5" >
-                <p class="display-5 mt-5 mb-1">Sobre <span style="color: #ff4f4f">KinSu</span></p>
+                <p class="display-5 mt-5 mb-1">Sobre <span style="color: #ff4f4f; font-weight: bold">KinSu</span></p>
                 <p class=" m-3 px-5 text-justify" style="font-size: large"> Somos una veterinaria impulsada por el amor a los animales. Sabemos que al igual que nosotros tambien amas a tus mascotas... Por ello ofresemos servicios de alta calidad incluso consentir a tu peludito, encontraras desde productos basicos hasta accesorios.</p>
             </div>
             <div class="col-5 mr-5">
               <img id="index_m1" src="https://pic55.photophoto.cn/20200506/0007020190188595_b.jpg" alt="Logo" width="auto" height="300px">
             </div>
           </div>
+          </main>
         </div>
         <div class="container-fluid text-center mx-auto my-2">
             <div class="row">
                 <div class="col">
-                    Servicios
+                    <span style="color: #ff4f4f; font-weight: bold">SERVICIOS</span></p>
                 </div>
             </div>
-            <div  class="row">
-                <div id="servicios1" class="col">
+            {# Contenedor de servicion (imagenes circulares) #}
+            <div  class="row justify-content-center">
+                <div id="servicios1" class="row">
+                    <figure>
+                        <img src="static/img/AtencionMedica.jpg" alt="Atencion Medica">
+                        <figcaption>Atención médica</figcaption>
+                    </figure>
+                    <figure>
+                    <img src="static/img/Alimento.jpg" alt="Alimento">
+                        <figcaption>Alimentos</figcaption>
+                    </figure>
+                    <figure>
+                    <img src="static/img/Accesorios.jpg" alt="Accesorios">
+                        <figcaption>Accesorios</figcaption>
+                    </figure>
+                    <figure>
+                    <img src="static/img/Estetica.jpg" alt="Estetica">
+                        <figcaption>Estetica</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
-        
+
+        {# Siguiente columnas #}
          <div class="container-fluid text-center">
               <div class="row">
-                <div class="col-4" style="background-color:#CDDBF9">
-                  Equipo de trabajo
+
+                  {# Equipo de trabajo #}
+                <div class="col-4" style="background-color:#D1D161">
+                  <span class="display-6 " style="color: #ff4f4f; font-weight: bold">EQUIPO DE TRABAJO</span></p>
+                    <img src="static/img/Equipo.jpg" alt="Equipo" width="auto" height="300" class="mx-auto d-block">
+                    <p class=" m-3 px-5 text-justify" style="font-size: large"> Somos una pareja que comparte el amor por los animales y la vocación de cuidarlos con responsabilidad y afecto. En nuestra pequeña veterinaria, cada paciente es atendido con respeto, empatía y dedicación. Creemos que la confianza se construye con cercanía y compromiso, y trabajamos cada día para que tú y tu compañero peludo se sientan como en casa. </p>
                 </div>
+
+                  {# Servicios #}
                 <div class="col-8" style="background-color:#FFDE94">
-                  Aqui van los servicios
+                  <span style="color: #ff4f4f; font-weight: bold">SERVICIOS</span></p>
                 </div>
               </div>
         </div>
