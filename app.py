@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for
+from dotenv import load_dotenv
+load_dotenv('development.env')
 import asyncio
-from cloudflarify import start_tunnel
+#from cloudflarify import start_tunnel
 app = Flask(__name__)
 
 @app.route('/')
@@ -14,7 +16,7 @@ def login():
     else:
         return redirect(url_for('index'))
 
-print("URL:" + asyncio.run(start_tunnel(app_port=5000)))
+#print("URL:" + asyncio.run(start_tunnel(app_port=5000)))
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    app.run()
